@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SOUMYARANJAN MUDULI - Full Stack Web Developer & Python Developer Portfolio">
+    <meta name="author" content="SOUMYARANJAN MUDULI">
+    <meta name="theme-color" content="#1a7a4a">
+    <meta property="og:title" content="SOUMYARANJAN MUDULI — Full Stack Developer">
+    <meta property="og:description" content="Portfolio of a Full Stack Web & Python Developer from Odisha">
+    <meta property="og:type" content="website">
+    <title>SOUMYARANJAN MUDULI — Full Stack Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+</head>
+<body>
+
+    <!-- ============================================
+         PAGE LOADER
+    ============================================ -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-logo">SM</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+            <p class="loader-text">Loading Portfolio...</p>
+        </div>
+    </div>
+
+    <!-- ============================================
+         READING PROGRESS BAR
+    ============================================ -->
+    <div class="reading-progress" id="readingProgress"></div>
+
+    <!-- ============================================
+         CUSTOM CURSOR
+    ============================================ -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-outline" id="cursorOutline"></div>
+
+    <!-- ============================================
+         PARTICLE BACKGROUND
+    ============================================ -->
+    <canvas id="particleCanvas" class="particle-canvas"></canvas>
+
+    <!-- ============================================
+         NAVBAR
+    ============================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-text">SM</span>
+                <span class="logo-name">SOUMYARANJAN</span>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="resume.pdf" download class="btn-resume" title="Download Resume">
+                    📄 <span class="btn-resume-text">Resume</span>
+                </a>
+
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="theme-icon sun">☀️</span>
+                    <span class="theme-icon moon">🌙</span>
+                    <span class="theme-slider"></span>
+                </button>
+
+                <div class="hamburger" id="hamburger">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO
+    ============================================ -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-greeting">👋 Hello, I'm</p>
+                <h1 class="hero-name">SOUMYARANJAN <span class="highlight">MUDULI</span></h1>
+                <h2 class="hero-title">
+                    <span class="typed-text" id="typedText"></span>
+                    <span class="cursor">|</span>
+                </h2>
+                <p class="hero-desc">
+                    Diploma in Mechanical Engineering (Pursuing) • Full Stack Web Development Certified
+                    • Python Developer • Software Creator
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="resume.pdf" download class="btn btn-outline">📄 Download CV</a>
+                </div>
+
+                <div class="hero-socials">
+                    <a href="https://github.com/soumyaranjanmuduli234-pixel" target="_blank" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                    </a>
+                    <a href="mailto:mudulisoumyaranjan27@gmail.com" aria-label="Email">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    </a>
+                    <a href="https://wa.me/917325996774" target="_blank" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                    </a>
+                </div>
+
+                <!-- Live Clock & Visitor Counter -->
+                <div class="hero-widgets">
+                    <div class="widget-item">
+                        <span class="widget-icon">🕐</span>
+                        <span class="widget-text" id="liveClock">--:--:--</span>
+                    </div>
+                    <div class="widget-item">
+                        <span class="widget-icon">👀</span>
+                        <span class="widget-text">Visitors: <strong id="visitorCount">1,234</strong></span>
+                    </div>
+                    <div class="widget-item">
+                        <span class="widget-icon">🟢</span>
+                        <span class="widget-text">Available for work</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <div class="profile-circle">SM</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- ============================================
+         ABOUT
+    ============================================ -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About <span class="highlight">Me</span></h2>
+            <p class="section-subtitle">Who I am and what I do</p>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Hi! I'm <strong>SOUMYARANJAN MUDULI</strong>, a passionate
+                        <strong>Full Stack Web Developer</strong> and <strong>Python Developer</strong>
+                        from Odisha, India. I love building modern, efficient, and user-friendly
+                        applications that solve real-world problems.
+                    </p>
+                    <p>
+                        I'm currently pursuing my <strong>Diploma in Mechanical Engineering</strong>
+                        while simultaneously exploring the world of software development. I've
+                        completed a <strong>Full Stack Web Development Course</strong> and have
+                        hands-on experience in <strong>Python programming</strong>.
+                    </p>
+                    <p>
+                        Recently, I built a complete <strong>Accounting & Inventory Management
+                        Software</strong> (Tally Modern) using Python, Tkinter, and SQLite —
+                        featuring GST billing, customer management, stock tracking, and PDF reports.
+                    </p>
+
+                    <div class="about-stats">
+                        <div class="stat-box">
+                            <h3 data-count="10">0</h3>
+                            <p>Projects</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3 data-count="5">0</h3>
+                            <p>Technologies</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3 data-count="100">0</h3>
+                            <p>% Dedication</p>
+                        </div>
+                    </div>
+
+                    <!-- Share Buttons -->
+                    <div class="share-buttons">
+                        <span class="share-label">Share:</span>
+                        <a href="https://wa.me/?text=Check%20out%20this%20awesome%20portfolio%20by%20Soumyaranjan%20Muduli%20-%20https://soumyaranjanmuduli234-pixel.github.io/portfolio/" target="_blank" class="share-btn whatsapp" aria-label="Share on WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        </a>
+                        <a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20portfolio%20by%20Soumyaranjan%20Muduli&url=https://soumyaranjanmuduli234-pixel.github.io/portfolio/" target="_blank" class="share-btn twitter" aria-label="Share on Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://soumyaranjanmuduli234-pixel.github.io/portfolio/" target="_blank" class="share-btn linkedin" aria-label="Share on LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://soumyaranjanmuduli234-pixel.github.io/portfolio/" target="_blank" class="share-btn facebook" aria-label="Share on Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <button class="share-btn copy" id="copyLinkBtn" aria-label="Copy Link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SKILLS
+    ============================================ -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">My <span class="highlight">Skills</span></h2>
+            <p class="section-subtitle">Technologies I work with</p>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <h3>Frontend</h3>
+                    <p>HTML5, CSS3, JavaScript, Responsive Design</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚙️</div>
+                    <h3>Backend</h3>
+                    <p>Python, Node.js, SQLite, MySQL</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🖥️</div>
+                    <h3>Desktop Apps</h3>
+                    <p>Tkinter, PyInstaller, ReportLab</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📊</div>
+                    <h3>Data & Charts</h3>
+                    <p>Matplotlib, Pandas, Data Visualization</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🛠️</div>
+                    <h3>Tools</h3>
+                    <p>Git, GitHub, VS Code, PyCharm</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📐</div>
+                    <h3>Engineering</h3>
+                    <p>Mechanical Design, AutoCAD (Basics)</p>
+                </div>
+            </div>
+
+            <div class="skills-bars">
+                <div class="skill-bar">
+                    <div class="skill-info"><span>HTML & CSS</span><span>90%</span></div>
+                    <div class="skill-progress"><div class="skill-fill" data-width="90%"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info"><span>JavaScript</span><span>80%</span></div>
+                    <div class="skill-progress"><div class="skill-fill" data-width="80%"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info"><span>Python</span><span>85%</span></div>
+                    <div class="skill-progress"><div class="skill-fill" data-width="85%"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info"><span>Tkinter / Desktop Apps</span><span>80%</span></div>
+                    <div class="skill-progress"><div class="skill-fill" data-width="80%"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info"><span>SQL / Databases</span><span>75%</span></div>
+                    <div class="skill-progress"><div class="skill-fill" data-width="75%"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SERVICES
+    ============================================ -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">My <span class="highlight">Services</span></h2>
+            <p class="section-subtitle">What I can do for you</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3>Website Development</h3>
+                    <p>Modern, responsive websites using HTML, CSS, JavaScript. Perfect for businesses, portfolios, and blogs.</p>
+                    <div class="service-price">Starting ₹5,000</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🐍</div>
+                    <h3>Python Automation</h3>
+                    <p>Automate repetitive tasks, data processing, file management, and web scraping using Python scripts.</p>
+                    <div class="service-price">Starting ₹3,000</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🖥️</div>
+                    <h3>Desktop Software</h3>
+                    <p>Custom desktop applications using Python + Tkinter. Perfect for billing, inventory, and management systems.</p>
+                    <div class="service-price">Starting ₹10,000</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💰</div>
+                    <h3>Billing Software</h3>
+                    <p>Custom GST billing software for shops. Includes invoice printing, customer tracking, and reports.</p>
+                    <div class="service-price">Starting ₹15,000</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Responsive Design</h3>
+                    <p>Make your existing website mobile-friendly and fully responsive across all devices.</p>
+                    <div class="service-price">Starting ₹2,000</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Bug Fixing & Support</h3>
+                    <p>Fix bugs, optimize performance, add features, and provide ongoing technical support.</p>
+                    <div class="service-price">₹500/hour</div>
+                </div>
+            </div>
+
+            <div class="services-cta">
+                <h3>Need a custom solution?</h3>
+                <p>Let's discuss your project requirements</p>
+                <a href="https://wa.me/917325996774?text=Hi%2C%20I%20want%20to%20discuss%20a%20project!" target="_blank" class="btn btn-primary">
+                    💬 Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PROJECTS
+    ============================================ -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">My <span class="highlight">Projects</span></h2>
+            <p class="section-subtitle">Some of my recent work</p>
+
+            <!-- FEATURED PROJECT -->
+            <div class="featured-project">
+                <div class="featured-header">
+                    <span class="featured-badge">⭐ Featured Project</span>
+                    <h3>Tally Modern v1.0 — Accounting & Inventory Software</h3>
+                    <p class="featured-desc">
+                        A complete offline Accounting & Inventory Management Software for small
+                        businesses. Built from scratch with Python, Tkinter, and SQLite.
+                        Features 20+ modules including GST billing, stock management,
+                        sales analytics, and PDF reports.
+                    </p>
+                    <div class="tech-tags">
+                        <span>Python</span>
+                        <span>Tkinter</span>
+                        <span>SQLite</span>
+                        <span>ReportLab</span>
+                        <span>Matplotlib</span>
+                        <span>PyInstaller</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="TallyModern_v1.0.zip" download class="btn btn-primary">
+                            ⬇ Download Software (68 MB)
+                        </a>
+                        <a href="https://github.com/soumyaranjanmuduli234-pixel" target="_blank" class="btn btn-outline">
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="featured-gallery">
+                    <h4>📸 Screenshots</h4>
+                    <div class="gallery-grid">
+                        <img src="images/tally-1.png" alt="Tally Modern - Login" onclick="openLightbox(this.src)" loading="lazy">
+                        <img src="images/tally-2.png" alt="Tally Modern - Dashboard" onclick="openLightbox(this.src)" loading="lazy">
+                        <img src="images/tally-3.png" alt="Tally Modern - Sales Voucher" onclick="openLightbox(this.src)" loading="lazy">
+                        <img src="images/tally-4.png" alt="Tally Modern - Invoice PDF" onclick="openLightbox(this.src)" loading="lazy">
+                        <img src="images/tally-5.png" alt="Tally Modern - Analytics" onclick="openLightbox(this.src)" loading="lazy">
+                        <img src="images/tally-6.png" alt="Tally Modern - Reports" onclick="openLightbox(this.src)" loading="lazy">
+                    </div>
+                    <p class="gallery-hint">💡 Click any image to view in full size</p>
+                </div>
+
+                <div class="featured-details">
+                    <h4>✨ Key Features</h4>
+                    <div class="features-grid">
+                        <div class="feature-item">💰 GST Billing (CGST/SGST/IGST)</div>
+                        <div class="feature-item">📦 Stock Management</div>
+                        <div class="feature-item">👥 Customer Udhaar Khata</div>
+                        <div class="feature-item">📊 Sales Analytics</div>
+                        <div class="feature-item">📈 Profit & Loss Report</div>
+                        <div class="feature-item">🖨️ Multi-Copy Print</div>
+                        <div class="feature-item">💵 Cash Drawer</div>
+                        <div class="feature-item">🔒 Offline & Secure</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OTHER PROJECTS -->
+            <h3 class="projects-heading">Other Projects</h3>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">🛒</div>
+                    <h3>Netflix Clone</h3>
+                    <p>Responsive Netflix landing page with interactive UI.</p>
+                    <div class="tech-tags">
+                        <span>HTML</span><span>CSS</span><span>JS</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">🏦</div>
+                    <h3>Apex Commercial Bank</h3>
+                    <p>Banking portal with login and dashboard UI.</p>
+                    <div class="tech-tags">
+                        <span>HTML</span><span>CSS</span><span>JS</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">🚌</div>
+                    <h3>Mahakal Bus Travels</h3>
+                    <p>Bus ticket booking website with route selection.</p>
+                    <div class="tech-tags">
+                        <span>HTML</span><span>CSS</span><span>JS</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">🏭</div>
+                    <h3>Vedant Aluminum Refinery</h3>
+                    <p>Company portfolio and product catalog website.</p>
+                    <div class="tech-tags">
+                        <span>HTML</span><span>CSS</span><span>JS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CERTIFICATES
+    ============================================ -->
+    <section class="certificates" id="certificates">
+        <div class="container">
+            <h2 class="section-title">My <span class="highlight">Certificates</span></h2>
+            <p class="section-subtitle">Achievements & Certifications</p>
+
+            <div class="certificates-grid">
+                <div class="certificate-card" onclick="openLightbox('images/cert-fullstack.png')">
+                    <div class="certificate-image">
+                        <img src="images/cert-fullstack.png" alt="Full Stack Web Development Certificate" loading="lazy">
+                    </div>
+                    <div class="certificate-info">
+                        <h3>Full Stack Web Development</h3>
+                        <p>Completed comprehensive training in HTML, CSS, JavaScript</p>
+                        <span class="certificate-badge">🏆 Certified</span>
+                    </div>
+                </div>
+
+                <!-- <div class="certificate-card" onclick="openLightbox('images/cert-python.png')">
+                    <div class="certificate-image">
+                        <img src="images/cert-python.png" alt="Python Programming Certificate" loading="lazy">
+                    </div>
+                    <div class="certificate-info">
+                        <h3>Python Programming</h3>
+                        <p>Learned Python from basics to advanced — OOP, GUI, DB</p>
+                        <span class="certificate-badge">🏆 Certified</span>
+                    </div>
+                </div> -->
+<!-- 
+                <div class="certificate-card" onclick="openLightbox('images/cert-diploma.png')">
+                    <div class="certificate-image">
+                        <img src="images/cert-diploma.png" alt="Diploma in Mechanical Engineering" loading="lazy">
+                    </div>
+                    <div class="certificate-info">
+                        <h3>Diploma in Mechanical Engineering</h3>
+                        <p>Currently pursuing — focused on design & manufacturing</p>
+                        <span class="certificate-badge">📚 Pursuing</span>
+                    </div>
+                </div>
+            </div> -->
+
+            <p class="certificates-hint">💡 Click any certificate to view in full size</p>
+        </div>
+    </section>
+
+    <!-- ============================================
+         EDUCATION
+    ============================================ -->
+    <section class="education" id="education">
+        <div class="container">
+            <h2 class="section-title">My <span class="highlight">Education</span></h2>
+            <p class="section-subtitle">My academic journey</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023 - Present</span>
+                        <h3>Diploma in Mechanical Engineering</h3>
+                        <p>Currently pursuing diploma with focus on engineering fundamentals,
+                        CAD, and manufacturing processes.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023</span>
+                        <h3>10th Standard (Matriculation)</h3>
+                        <p>Completed secondary education with strong foundation in
+                        Mathematics and Science.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024</span>
+                        <h3>Full Stack Web Development Course</h3>
+                        <p>Completed comprehensive training in HTML, CSS, JavaScript,
+                        and modern web development practices.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024 - 2025</span>
+                        <h3>Python Programming</h3>
+                        <p>Learned Python from basics to advanced — OOP, file handling,
+                        GUI development, and database integration.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         TESTIMONIALS
+    ============================================ -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What People <span class="highlight">Say</span></h2>
+            <p class="section-subtitle">Testimonials from clients & mentors</p>
+
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">
+                        Soumyaranjan built our shop's billing software from scratch. 
+                        His Tally Modern software saved us hours of manual work every day. 
+                        Highly recommended for small businesses!
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RK</div>
+                        <div class="author-info">
+                            <h4>Ramesh Kumar</h4>
+                            <p>Shop Owner, Bhubaneswar</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">
+                        One of the most dedicated students I've taught. Soumyaranjan's 
+                        grasp of Python fundamentals and problem-solving skills is 
+                        exceptional for his level.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PM</div>
+                        <div class="author-info">
+                            <h4>Prof. P. Mohanty</h4>
+                            <p>Python Instructor</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">
+                        Delivered our business website exactly as we wanted — on time 
+                        and on budget. Great communication and quality work.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SP</div>
+                        <div class="author-info">
+                            <h4>Sanjay Patel</h4>
+                            <p>Client, Vedant Refinery</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FREELANCE PRICING
+    ============================================ -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Freelance <span class="highlight">Packages</span></h2>
+            <p class="section-subtitle">Simple, transparent pricing</p>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Basic</h3>
+                        <div class="pricing-price">
+                            <span class="currency">₹</span>
+                            <span class="amount">5,000</span>
+                            <span class="period">/ project</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✅ Single Page Website</li>
+                        <li>✅ Mobile Responsive</li>
+                        <li>✅ Modern Design</li>
+                        <li>✅ Contact Form</li>
+                        <li>✅ 7 Days Delivery</li>
+                        <li>❌ Admin Panel</li>
+                    </ul>
+                    <a href="https://wa.me/917325996774?text=Hi%2C%20I%20want%20the%20Basic%20package!" 
+                       target="_blank" class="btn btn-outline pricing-btn">Get Started</a>
+                </div>
+
+                <div class="pricing-card featured-pricing">
+                    <div class="pricing-badge">⭐ Popular</div>
+                    <div class="pricing-header">
+                        <h3>Standard</h3>
+                        <div class="pricing-price">
+                            <span class="currency">₹</span>
+                            <span class="amount">15,000</span>
+                            <span class="period">/ project</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✅ Multi-Page Website</li>
+                        <li>✅ Mobile Responsive</li>
+                        <li>✅ Premium Design</li>
+                        <li>✅ Contact Form + Email</li>
+                        <li>✅ Basic SEO</li>
+                        <li>✅ 14 Days Delivery</li>
+                    </ul>
+                    <a href="https://wa.me/917325996774?text=Hi%2C%20I%20want%20the%20Standard%20package!" 
+                       target="_blank" class="btn btn-primary pricing-btn">Get Started</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Premium</h3>
+                        <div class="pricing-price">
+                            <span class="currency">₹</span>
+                            <span class="amount">50,000</span>
+                            <span class="period">/ project</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✅ Custom Web App</li>
+                        <li>✅ Desktop Software</li>
+                        <li>✅ Admin Panel</li>
+                        <li>✅ Database Integration</li>
+                        <li>✅ Full SEO</li>
+                        <li>✅ 30 Days Support</li>
+                    </ul>
+                    <a href="https://wa.me/917325996774?text=Hi%2C%20I%20want%20the%20Premium%20package!" 
+                       target="_blank" class="btn btn-outline pricing-btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FAQ
+    ============================================ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked <span class="highlight">Questions</span></h2>
+            <p class="section-subtitle">Got questions? We've got answers</p>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What services do you offer?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>I offer website development, Python automation, desktop software creation, 
+                        custom GST billing software, responsive design services, and bug fixing.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long does a project take?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Depends on complexity. A single-page website takes 3-7 days, 
+                        a multi-page site takes 2 weeks, and custom software takes 3-6 weeks.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is Tally Modern software free?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Tally Modern v1.0 is completely free to download and use. 
+                        For custom modifications or licensing, contact me directly.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you provide ongoing support?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. All packages include 7-30 days of free support. Extended 
+                        support available at ₹500/hour.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How can I contact you?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can reach me via WhatsApp (+91 7325996774), email 
+                        (mudulisoumyaranjan27@gmail.com), or through the contact form below.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you work with international clients?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, I work with clients worldwide. Payments accepted via UPI, 
+                        bank transfer, or international payment gateways.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CONTACT
+    ============================================ -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+            <p class="section-subtitle">Let's build something amazing together</p>
+
+            <div class="contact-grid">
+                <a href="mailto:mudulisoumyaranjan27@gmail.com" class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Email</h3>
+                    <p>mudulisoumyaranjan27@gmail.com</p>
+                </a>
+                <a href="tel:+917325996774" class="contact-card">
+                    <div class="contact-icon">📱</div>
+                    <h3>Phone</h3>
+                    <p>+91 7325996774</p>
+                </a>
+                <a href="https://wa.me/917325996774" target="_blank" class="contact-card">
+                    <div class="contact-icon">💬</div>
+                    <h3>WhatsApp</h3>
+                    <p>Chat with me</p>
+                </a>
+                <a href="https://github.com/soumyaranjanmuduli234-pixel" target="_blank" class="contact-card">
+                    <div class="contact-icon">💻</div>
+                    <h3>GitHub</h3>
+                    <p>soumyaranjanmuduli234-pixel</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+    ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 <strong>SOUMYARANJAN MUDULI</strong>. All Rights Reserved.</p>
+            <p class="footer-note">Built with ❤️ using HTML, CSS & JavaScript</p>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         WHATSAPP FLOATING BUTTON
+    ============================================ -->
+    <a href="https://wa.me/917325996774?text=Hi%20Soumyaranjan%2C%20I%20visited%20your%20portfolio%20and%20want%20to%20talk!"
+       target="_blank"
+       class="whatsapp-float"
+       aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+        <span class="whatsapp-tooltip">Chat with me</span>
+    </a>
+
+    <!-- ============================================
+         LIGHTBOX
+    ============================================ -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="" id="lightboxImg">
+    </div>
+
+    <!-- ============================================
+         BACK TO TOP
+    ============================================ -->
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to top">
+        ↑
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
