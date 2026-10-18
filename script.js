@@ -487,3 +487,63 @@ document.addEventListener('keydown', function (e) {
         closeLightbox();
     }
 });
+
+//right click disable code //
+
+document.addEventListener("contextmenu", (e) => {
+  e.preventDefault();
+  logSecurityIntegrityEvent(
+    "WARNING: Unauthorized Right-Click context menu request intercepted.",
+    "warn-log"
+  );
+  triggerPremiumGlassToast(
+    "Security Policy: Inspect options restricted.",
+    "error-type"
+  );
+});
+
+document.addEventListener("keydown", (e) => {
+  if (
+    e.key === "F12" ||
+    (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) ||
+    (e.ctrlKey && e.key === "U")
+  ) {
+    e.preventDefault();
+
+    logSecurityIntegrityEvent(
+      `CRITICAL: Hotkey combo '${e.key}' block activation triggered.`,
+      "danger-log"
+    );
+
+    activateSecurityDefenseBlur();
+  }
+});
+
+setInterval(() => {
+  const startTime = performance.now();
+
+  debugger;
+
+  if (performance.now() - startTime > 100) {
+    logSecurityIntegrityEvent(
+      "CRITICAL: Console injection debugger trap activated.",
+      "danger-log"
+    );
+
+    activateSecurityDefenseBlur();
+  }
+}, 600);
+
+function activateSecurityDefenseBlur() {
+  document.body.classList.add("security-blur");
+
+  triggerPremiumGlassToast(
+    "Security Matrix Infringement Detected! Controls Intercepted.",
+    "error-type"
+  );
+
+  setTimeout(() => {
+    document.body.classList.remove("security-blur");
+  }, 3500);
+}
+
